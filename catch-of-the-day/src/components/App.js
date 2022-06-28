@@ -27,11 +27,13 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        localStorage.setItem(this.props.match.params.storeId, JSON.stringify(this.state.order))
+        localStorage.setItem(
+            this.props.match.params.storeId, 
+            JSON.stringify(this.state.order)
+        );
     }
 
     componentWillUnmount() {
-        console.log('Did unmount!!!');
         base.removeBinding(this.ref);
     }
 
