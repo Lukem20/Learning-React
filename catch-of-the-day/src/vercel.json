@@ -1,7 +1,4 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/store/:storeId", "dest": "/" }
-  ],
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }],
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
